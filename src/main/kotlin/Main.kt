@@ -3,6 +3,7 @@ fun moveDisk(from: Int, to: Int) {
 }
 
 fun moveTower(height: Int, from: Int, to: Int, using: Int) {
+    if (height < 1) return
     if (height == 1) {
         moveDisk(from, to)
     } else {
@@ -25,5 +26,6 @@ fun main() {
     val from = print("Moving tower from pin number: ").run { readln().toInt() }
     val to = print("Moving tower to pin number: ").run { readln().toInt() }
     val using = print("The third pin number: ").run { readln().toInt() }
+    println("\nThis is how to move the disks:")
     moveTower(height, from, to, using)
 }
